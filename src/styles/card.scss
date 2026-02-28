@@ -1,7 +1,22 @@
+.card {
 
-.item-card {
-  display: flex;
-  flex-direction: column;
+    &__item {
+    display: flex;
+    flex-direction: column;
+    background-color: $whiteColor;
+    padding: 30px 17px 17px;
+    border: 1px solid $borderColor;
+    overflow: hidden;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:hover .item-card__title {
+      color: $titleHoverColor;
+    }
+  }
 
   &__image {
     text-align: center;
@@ -35,6 +50,7 @@
   &__title {
     color: $mainColor;
     font-weight: 500;
+    transition: 0.3s;
 
     &:not(:last-child) {
       margin-bottom: 4px;
@@ -96,7 +112,7 @@
 
     &:hover {
       border-color: $accentColor;
-      background-color: transparent;
+      background-color: $whiteColor;
       color: $accentColor;
     }
   }

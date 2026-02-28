@@ -53,7 +53,7 @@ body {
     }
 
     &:hover .item-card__title {
-      color: #34568b;
+      color: $titleHoverColor;
     }
   }
 }
