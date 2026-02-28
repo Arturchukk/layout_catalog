@@ -1,20 +1,23 @@
-.card {
+.catalog {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 46px 48px;
+  gap: $gridGapVertical $gridGapHorizontal;
   justify-content: center;
 
   @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, $cardWidth);
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, $cardWidth);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, $cardWidth);
   }
+}
+
+.card {
 
     &__item {
     display: flex;
@@ -23,14 +26,11 @@
     padding: 30px 17px 17px;
     border: 1px solid $borderColor;
     overflow: hidden;
-    transition: all 0.3s;
+    width: $cardWidth;
+    transition: $transitionDuration;
 
     &:hover {
       transform: scale(1.2);
-    }
-
-    &:hover .item-card__title {
-      color: $titleHoverColor;
     }
   }
 
@@ -66,10 +66,14 @@
   &__title {
     color: $mainColor;
     font-weight: 500;
-    transition: 0.3s;
+    transition: $transitionDuration;
 
     &:not(:last-child) {
       margin-bottom: 4px;
+    }
+
+     &:hover {
+      color: $titleHoverColor;
     }
   }
 

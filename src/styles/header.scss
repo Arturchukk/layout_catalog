@@ -21,9 +21,9 @@
   }
 
   &__link {
-    color: #060b35;
+    color: $mainColor;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: $transitionDuration;
     display: block;
     line-height: 60px;
     font-weight: 500;
